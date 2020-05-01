@@ -49,12 +49,26 @@ public class JobData {
         return values;
     }
 
+//    private static ArrayList<HashMap<String, String>> allJobsCopy = new ArrayList<>();
+//
+//    private ArrayList<HashMap<String, String>> getAllJobs() {
+//        return allJobs;
+//    }
+//
+//    private static void makeJobCopy() {
+//        for(HashMap<String, String> job : allJobs) {
+//            allJobsCopy.add(job);
+//        }
+//    }
+
     public static ArrayList<HashMap<String, String>> findAll() {
 
         // load data, if not already loaded
         loadData();
-
-        return allJobs;
+//        makeJobCopy();
+        ArrayList<HashMap<String, String>> allJobsCopy = new ArrayList<>();
+        allJobsCopy.addAll(allJobs);
+        return allJobsCopy;
     }
 
     /**
