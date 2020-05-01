@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Collections;
 
 /**
  * Created by LaunchCode
@@ -134,8 +135,8 @@ public class JobData {
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
 
         for (HashMap<String, String> row : allJobs) {
-            for(Map.Entry<String, String> pos : row.entrySet()) {
-                String val = pos.getValue().toLowerCase();
+            for(Map.Entry<String, String> position : row.entrySet()) {
+                String val = position.getValue().toLowerCase();
                 if(val.contains(searchTerm) && !jobs.contains(row)) {
                     jobs.add(row);
                 }
